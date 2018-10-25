@@ -1,0 +1,51 @@
+﻿@using Auction.Common.Constant.Messages
+@model IEnumerable<Auction.WebSite.Models.AuctionTemplateViewModel>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Started)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartedDateTime)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifidedDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Started)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartedDateTime)
+                </td>
+                <td>
+                    @Html.ActionLink(Messages.MessagesConstant.Participation.ToString(), "ActiveLots", new { id = item.Id })
+                </td>
+            </tr>
+        }
+</table>

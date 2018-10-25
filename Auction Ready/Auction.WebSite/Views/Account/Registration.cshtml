@@ -1,0 +1,70 @@
+﻿@viewModel Auction.WebSite.Models.RegistrationViewModel
+
+@{
+    Layout = "~/Views/shared/_Layout.empty.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @using (Html.BeginForm())
+    {
+        <fieldset class="form-signin">
+            <h4>Регистрация</h4>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.NewEmail)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.NewEmail)
+                @Html.ValidationMessageFor(model => model.NewEmail)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.NewPassword)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.NewPassword)
+                @Html.ValidationMessageFor(model => model.NewPassword)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.ConfirmPassword)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ConfirmPassword)
+                @Html.ValidationMessageFor(model => model.ConfirmPassword)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.FirstName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.LastName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+            @Html.ValidationSummary(true)
+            <p>
+                <button class="btn btn-large btn-success" type="submit">Регистрация</button>
+            </p>
+        </fieldset>
+    }
+</body>
+</html>

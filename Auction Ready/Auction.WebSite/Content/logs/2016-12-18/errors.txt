@@ -1,0 +1,1 @@
+2016-12-18 21:28:56.3359|ERROR|Auction.WebSite.Controllers.AccountController|Authorization failed

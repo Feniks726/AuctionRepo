@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Auction Ready/.vs
+/Auction Ready/Auction.Common/bin/Debug
+/Auction Ready/Auction.Common/obj/Debug
+/Auction Ready/Auction.DAL/bin/Debug
+/Auction Ready/Auction.DAL/obj/Debug
+/Auction Ready/Auction.WebSite/bin
+/Auction Ready/Auction.WebSite/obj/Debug

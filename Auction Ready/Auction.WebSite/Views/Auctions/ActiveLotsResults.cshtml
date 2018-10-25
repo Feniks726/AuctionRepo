@@ -1,0 +1,55 @@
+﻿@using Auction.Common.Constant.Messages
+@using Auction.WebSite.Models
+@model IEnumerable<ActiveLotViewModel>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Context)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().StartingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DirectionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().LiderRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Lider)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model ?? new List<ActiveLotViewModel>())
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Context)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartingPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectionText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiderRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lider.FullName)
+            </td>
+           <td>
+                @Html.ActionLink(Messages.MessagesConstant.Participation.ToString(), "CreateRate", new { id = item.Id, auctionTemplateId= item.AuctionTemplateId })
+            </td>
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,5 @@
+2016-12-25 23:29:00.2114|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-25 23:34:53.4342|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-25 23:38:00.8412|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-25 23:44:51.5884|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-25 23:53:34.7452|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов

@@ -1,0 +1,2 @@
+2016-12-20 17:05:57.8931|ERROR|Auction.WebSite.Controllers.AccountController|Authorization failed
+2016-12-20 17:06:10.0014|ERROR|Auction.WebSite.Controllers.AccountController|Authorization failed

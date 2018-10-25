@@ -1,0 +1,82 @@
+﻿@using Auction.Common.Constant.Messages
+@model IEnumerable<Auction.WebSite.Models.AuctionTemplateViewModel>
+
+@{
+    ViewBag.Title = "MyAuctions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.AuctionTemplates</h2>
+
+<p>
+    @Html.ActionLink(Messages.MessagesConstant.CreateNew.ToString(), "CreateTemplate")
+</p>
+
+<form method="get">
+    <div class="form-inline">
+        <label class="control-label"><h8>@Messages.MessagesConstant.FilterBy.Format(@Html.DisplayNameFor(model => model.Name))</h8></label>
+        @Html.TextBox("filterByName")
+        <input type="submit" value=@Messages.MessagesConstant.Filter class="btn btn-success" />
+    </div>
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Started)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifidedDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Started)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartedDateTime)
+            </td>
+            <td>
+                <div style="@(item.LotsCount>0 && (!item.StartedDateTime.HasValue || item.IsStarted)? "display:block" : "display:none")">
+                    @Html.ActionLink(item.IsStarted ? Messages.MessagesConstant.Stop.ToString() : Messages.MessagesConstant.Start.ToString(), "StartStopTemplate", new { id = item.Id })
+                </div>
+                <div style="@(!item.StartedDateTime.HasValue? "display:block" : "display:none")">
+                    @Html.ActionLink(Messages.MessagesConstant.Edit.ToString(), "EditTemplate", new { id = item.Id })
+                </div>
+                @Html.ActionLink(Messages.MessagesConstant.Details.ToString(), "DetailsTemplate", new { id = item.Id })
+                <div style="@(!item.StartedDateTime.HasValue? "display:block" : "display:none")">
+                    @Html.ActionLink(Messages.MessagesConstant.Delete.ToString(), "DeleteTemplate", new { id = item.Id })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

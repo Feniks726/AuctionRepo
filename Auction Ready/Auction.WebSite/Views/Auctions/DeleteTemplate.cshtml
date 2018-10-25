@@ -1,0 +1,74 @@
+﻿@using Auction.Common.Constant.Messages
+@model Auction.WebSite.Models.AuctionTemplateViewModel
+
+@{
+    ViewBag.Title = "DeleteTemplate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.DeleteTemplate.ToString()</h2>
+
+<h3>@Messages.MessagesConstant.Confirm.Format(@Messages.MessagesConstant.Deletion)</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifidedDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsStarted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsStarted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Started)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Started)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Messages.MessagesConstant.Delete.ToString()" class="btn btn-success" /> |
+            @Html.ActionLink(@Messages.MessagesConstant.BackToList.ToString(), "AuctionTemplates")
+        </div>
+    }
+</div>

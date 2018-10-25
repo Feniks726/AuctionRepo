@@ -1,0 +1,14 @@
+2016-12-23 00:00:23.1657|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 00:04:05.2710|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "qew234e234" created. Author - 1.
+2016-12-23 00:04:19.9318|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-23 00:04:35.9267|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name19" stoped. The user "1"
+2016-12-23 00:08:01.8972|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name9" started. The user "1"
+2016-12-23 00:08:10.4616|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name9" stoped. The user "1"
+2016-12-23 00:35:58.8874|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 00:37:59.3921|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 00:40:02.0609|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 00:40:16.8987|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name8" started. The user "1"
+2016-12-23 00:40:22.1120|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name7" started. The user "1"
+2016-12-23 02:35:35.2666|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 23:38:45.9855|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-23 23:54:49.4567|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов

@@ -1,0 +1,3 @@
+2016-12-19 00:18:04.9092|ERROR|Auction.WebSite.Controllers.AccountController|The user "Иван Иванов" - blocked
+2016-12-19 00:18:58.5023|ERROR|Auction.WebSite.Controllers.AccountController|Authorization failed
+2016-12-19 00:19:16.5574|ERROR|Auction.WebSite.Controllers.AccountController|Authorization failed

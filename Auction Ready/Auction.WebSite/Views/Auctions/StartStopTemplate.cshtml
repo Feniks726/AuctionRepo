@@ -1,0 +1,66 @@
+﻿@using Auction.Common.Constant.Messages
+@model Auction.WebSite.Models.AuctionTemplateViewModel
+
+@{
+    ViewBag.Title = "StartStopAuctionTemplate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.StartStopAuctionTemplate.ToString()</h2>
+
+<h3>@Messages.MessagesConstant.Confirm.Format(@Model.IsStarted? @Messages.MessagesConstant.StartingAuctionTemplate: @Messages.MessagesConstant.StopingAuctionTemplate)</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifidedDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Started)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Started)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Messages.MessagesConstant.StartStopAuctionTemplate.ToString()" class="btn btn-success" /> |
+            @Html.ActionLink(@Messages.MessagesConstant.BackToList.ToString(), "AuctionTemplates")
+        </div>
+    }
+</div>

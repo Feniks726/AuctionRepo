@@ -1,0 +1,10 @@
+2016-12-19 00:08:25.6593|DEBUG|Auction.WebSite.Controllers.AccountController|The user "Иван Иванов" - created
+2016-12-19 00:19:22.5467|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User {0}
+2016-12-19 00:31:57.1922|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 00:45:39.3992|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 00:49:12.0417|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 00:56:59.7380|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 00:57:30.0768|DEBUG|Auction.WebSite.Controllers.AccountController|Out user - 1
+2016-12-19 23:09:37.8783|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 23:12:59.8711|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-19 23:40:42.8973|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов

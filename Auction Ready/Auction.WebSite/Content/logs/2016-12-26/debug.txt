@@ -1,0 +1,40 @@
+2016-12-26 07:16:01.1498|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-26 11:45:11.9860|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 11:49:28.4953|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:16:35.6662|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:17:14.3200|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created mistake. Lot: "Context88". The user "1". Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-26 15:22:13.9848|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:23:42.6410|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:24:51.4594|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created mistake. Lot: "Context88". The user "1". Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-26 15:27:20.1751|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created mistake. Lot: "Context88". The user "1". Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-26 15:31:02.2195|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:31:33.0519|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created lot - Context88. User - 1.
+2016-12-26 15:41:28.9890|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 15:41:46.2278|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created lot - Context88. User - 1.
+2016-12-26 15:42:21.8256|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created lot - Context88. User - 1.
+2016-12-26 16:05:20.4828|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:10:16.7465|DEBUG|Auction.WebSite.Controllers.AccountController|Out user - ???? ??????
+2016-12-26 16:10:23.3440|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:10:38.9964|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name142" started. The user "1"
+2016-12-26 16:10:43.3291|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name141" started. The user "1"
+2016-12-26 16:11:03.8498|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:11:30.0775|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:12:15.2869|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:12:42.1525|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:13:58.2196|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:14:14.9711|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:16:25.9070|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:16:44.6482|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:17:04.2675|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:17:53.2474|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:17:56.5429|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:17:59.2608|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:18:44.9094|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:19:55.4216|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:20:06.4209|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:20:28.6262|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Decrease" and starting price less than rate.The lot: "Context0". The user "1"
+2016-12-26 16:25:04.8890|DEBUG|Auction.WebSite.Controllers.AuctionsController|The direction: "Increase" and starting price more than rate.The lot: "Context0". The user "1"
+2016-12-26 16:25:27.9490|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created lot - Context0. User - 1.
+2016-12-26 16:35:31.6088|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:40:58.1237|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-26 16:41:14.4143|DEBUG|Auction.WebSite.Controllers.AuctionsController|The rate created lot - Context0. User - 1.

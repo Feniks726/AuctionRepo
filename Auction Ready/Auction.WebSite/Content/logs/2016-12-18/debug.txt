@@ -1,0 +1,5 @@
+2016-12-18 21:26:45.7042|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful
+2016-12-18 21:28:43.4821|DEBUG|Auction.WebSite.Controllers.AccountController|Out user
+2016-12-18 21:30:25.2091|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful
+2016-12-18 21:30:29.1783|DEBUG|Auction.WebSite.Controllers.AccountController|Out user
+2016-12-18 23:19:51.4679|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful

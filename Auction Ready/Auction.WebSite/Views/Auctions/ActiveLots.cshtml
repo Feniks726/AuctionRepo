@@ -1,0 +1,33 @@
+﻿@using Auction.Common.Constant.Messages
+@model IEnumerable<Auction.WebSite.Models.LotViewModel>
+@{
+    ViewBag.Title = "ActiveLots";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.ActiveLots</h2>
+
+
+<form method="get">
+    <div class="form-inline">
+        <label class="control-label"><h8>@Messages.MessagesConstant.FilterBy.Format(@Html.DisplayNameFor(model => model.Context))</h8></label>
+        @Html.TextBox("filterByName")
+        <input type="submit" value=@Messages.MessagesConstant.Filter class="btn btn-success" />
+    </div>
+</form>
+<div id="dvActiveAuctionsResults">
+    @{Html.RenderPartial("ActiveLotsResults", Model);}
+</div>
+
+<div>
+    @Html.ActionLink(@Messages.MessagesConstant.BackToList.ToString(), "ActiveAuctions")
+</div>
+
+<script>
+    setInterval(
+        function ()
+        {
+    var filterByName = $("#filterByName").val();
+    $("#dvActiveAuctionsResults").load('@(Url.Action("ActiveLotsResults", "Auctions",null, Request.Url.Scheme))?filterByName=' + filterByName)}, 5000)
+</script>
+

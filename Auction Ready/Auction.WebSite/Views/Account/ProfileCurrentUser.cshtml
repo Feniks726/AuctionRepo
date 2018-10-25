@@ -1,0 +1,50 @@
+﻿@model Auction.WebSite.Models.ProfileViewModel
+
+@{
+    ViewBag.Title = "Профиль пользователя";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @using (Html.BeginForm())
+    {
+        <fieldset class="form-signin">
+            <h4>Профиль пользователя</h4>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Email)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Email)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.FirstName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.FirstName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.LastName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LastName)
+            </div>
+        </fieldset>
+    }
+</body>
+</html>

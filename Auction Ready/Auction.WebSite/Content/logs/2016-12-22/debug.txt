@@ -1,0 +1,83 @@
+2016-12-22 10:51:57.1833|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 10:54:27.9719|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 10:58:11.4016|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:06:07.9395|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:07:32.6606|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex1. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:08:29.9672|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex1. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:13:03.1439|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:16:39.9098|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:17:48.1647|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex1. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:30:00.2486|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:33:56.2834|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:34:19.0999|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex1. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:35:38.2097|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex1. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:35:50.3817|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex1" created. Author - 1.
+2016-12-22 11:39:06.3729|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex2" created. Author - 1.
+2016-12-22 11:41:27.6999|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:44:39.8452|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:47:46.0885|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex3. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:51:43.6166|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:52:19.9913|DEBUG|Auction.WebSite.Controllers.AuctionsController|Mistake creation of lot  - Contex3. Author - 1. Mistake - An error occurred while updating the entries. See the inner exception for details.
+2016-12-22 11:55:14.5574|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 11:55:50.1137|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex3" created. Author - 1.
+2016-12-22 14:39:45.0802|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 14:55:00.9454|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 14:56:16.1840|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name1 " started. The user "1"
+2016-12-22 14:56:21.1317|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction started mistake"Name1 ". The user "1"
+2016-12-22 14:56:58.4954|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction started mistake"Name1 ". The user "1"
+2016-12-22 14:59:46.7545|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 14:59:54.4244|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction started mistake"Name1 ". The user "1"
+2016-12-22 15:00:02.0019|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction started mistake"Name1 ". The user "1"
+2016-12-22 15:03:15.0630|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:06:18.0136|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:07:44.9974|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:08:34.4847|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:14:51.0385|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:23:46.8800|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:28:25.0085|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:29:53.1003|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:30:31.8312|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:40:44.3369|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:43:16.3135|DEBUG|Auction.WebSite.Controllers.AccountController|Out user - ???? ??????
+2016-12-22 15:43:22.5145|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 15:48:23.5258|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex3" edited. Author - 1.
+2016-12-22 15:48:40.5531|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex2" edited. Author - 1.
+2016-12-22 15:48:46.5376|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex2" edited. Author - 1.
+2016-12-22 15:50:04.1712|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 15:59:10.9629|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 16:01:42.8526|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 16:04:44.2903|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:05:55.8006|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:06:00.3415|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:06:39.4312|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:06:44.7185|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:07:05.2561|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:08:17.3453|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:08:41.2215|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:09:01.2226|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:09:20.6574|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:11:43.6685|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:11:55.9451|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Contex4" created. Author - 1.
+2016-12-22 16:12:12.1930|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "" deleted. Author - 1.
+2016-12-22 16:38:54.5188|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 16:39:48.3923|DEBUG|Auction.WebSite.Controllers.AccountController|Out user - ???? ??????
+2016-12-22 16:39:55.4663|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 16:40:38.0305|DEBUG|Auction.WebSite.Controllers.AccountController|Out user - ???? ??????
+2016-12-22 16:40:43.8154|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User ???? ??????
+2016-12-22 16:42:33.1635|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name179" started. The user "1"
+2016-12-22 22:14:25.5786|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 22:17:56.2716|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name1 " stoped. The user "1"
+2016-12-22 22:18:07.3492|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name1 " started. The user "1"
+2016-12-22 22:39:43.0218|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 22:42:56.1082|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 22:52:26.9562|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 22:58:16.1211|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:00:15.4847|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:12:33.3931|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:17:01.3081|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:22:43.1761|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:35:35.7090|DEBUG|Auction.WebSite.Controllers.AuctionsController|The auction  "Name19" started. The user "1"
+2016-12-22 23:45:44.9197|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:51:34.1273|DEBUG|Auction.WebSite.Controllers.AccountController|Authorization successful. User Иван Иванов
+2016-12-22 23:56:07.5565|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Context2" created. Author - 1.
+2016-12-22 23:56:24.4724|DEBUG|Auction.WebSite.Controllers.AuctionsController|The lot "Context2" edited. Author - 1.

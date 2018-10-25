@@ -1,0 +1,83 @@
+﻿@using Auction.Common.Constant.Messages
+@model Auction.WebSite.Models.LotViewModel
+
+@{
+    ViewBag.Title = "DeleteLot";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.DeleteLot.ToString()</h2>
+
+<h3>@Messages.MessagesConstant.Confirm.Format(@Messages.MessagesConstant.Deletion)</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt hidden="">
+            @Html.DisplayNameFor(model => model.AuctionTemplateId)
+        </dt>
+
+        <dd hidden="">
+            @Html.DisplayFor(model => model.AuctionTemplateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Context)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Context)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartingPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartingPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirectionText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirectionText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifidedDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Messages.MessagesConstant.Delete.ToString()" class="btn btn-success" /> |
+            @Html.ActionLink(@Messages.MessagesConstant.BackToList.ToString(), "DetailsTemplate", new {id=Model.AuctionTemplateId})
+        </div>
+    }
+</div>

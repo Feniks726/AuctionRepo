@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AuctionDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AuctionDBModelStoreContainer">
+    <EntitySet Name="Auctions" EntityType="AuctionDBModel.Store.Auctions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuctionTemplates" EntityType="AuctionDBModel.Store.AuctionTemplates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lots" EntityType="AuctionDBModel.Store.Lots" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="AuctionDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_LotAuction" Association="AuctionDBModel.Store.FK_LotAuction">
+      <End Role="Lots" EntitySet="Lots" />
+      <End Role="Auctions" EntitySet="Auctions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAuction" Association="AuctionDBModel.Store.FK_UserAuction">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Auctions" EntitySet="Auctions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AuctionTemplateLot" Association="AuctionDBModel.Store.FK_AuctionTemplateLot">
+      <End Role="AuctionTemplates" EntitySet="AuctionTemplates" />
+      <End Role="Lots" EntitySet="Lots" />
+    </AssociationSet>
+    <AssociationSet Name="UserAuctionTemplate" Association="AuctionDBModel.Store.UserAuctionTemplate">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AuctionTemplate" EntitySet="AuctionTemplates" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Auctions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LotId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifidedDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuctionTemplates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifidedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="IsStopped" Type="bit" Nullable="false" />
+    <Property Name="AuthorID" Type="bigint" Nullable="false" />
+    <Property Name="StartedDateTime" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Lots">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AuctionTemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Context" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Duration" Type="datetime" Nullable="true" />
+    <Property Name="StartingPrice" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Direction" Type="smallint" Nullable="false" />
+    <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+    <Property Name="ModifidedDateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_LotAuction">
+    <End Role="Lots" Type="AuctionDBModel.Store.Lots" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Auctions" Type="AuctionDBModel.Store.Auctions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lots">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Auctions">
+        <PropertyRef Name="LotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAuction">
+    <End Role="Users" Type="AuctionDBModel.Store.Users" Multiplicity="1" />
+    <End Role="Auctions" Type="AuctionDBModel.Store.Auctions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Auctions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AuctionTemplateLot">
+    <End Role="AuctionTemplates" Type="AuctionDBModel.Store.AuctionTemplates" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Lots" Type="AuctionDBModel.Store.Lots" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AuctionTemplates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lots">
+        <PropertyRef Name="AuctionTemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserAuctionTemplate">
+    <End Role="User" Type="AuctionDBModel.Store.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AuctionTemplate" Type="AuctionDBModel.Store.AuctionTemplates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AuctionTemplate">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AuctionDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Auction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="LotId" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="Rate" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifidedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Lot" Relationship="Self.FK_LotAuction" FromRole="Auctions" ToRole="Lots" />
+          <NavigationProperty Name="Author" Relationship="Self.FK_UserAuction" FromRole="Auctions" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="AuctionTemplate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifidedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsStopped" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Lots" Relationship="Self.FK_AuctionTemplateLot" FromRole="AuctionTemplates" ToRole="Lots" />
+          <NavigationProperty Name="Author" Relationship="AuctionDBModel.UserAuctionTemplate" FromRole="AuctionTemplate" ToRole="User" />
+          <Property Name="AuthorID" Type="Int64" Nullable="false" />
+          <Property Name="StartedDateTime" Type="DateTime" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Lot">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="AuctionTemplateId" Type="Guid" Nullable="false" />
+          <Property Name="Context" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Duration" Type="DateTime" Precision="3" />
+          <Property Name="StartingPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Direction" Type="Int16" Nullable="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifidedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Auctions" Relationship="Self.FK_LotAuction" FromRole="Lots" ToRole="Auctions" />
+          <NavigationProperty Name="AuctionTemplate" Relationship="Self.FK_AuctionTemplateLot" FromRole="Lots" ToRole="AuctionTemplates" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Auctions" Relationship="Self.FK_UserAuction" FromRole="Users" ToRole="Auctions" />
+          <NavigationProperty Name="AuctionTemplates" Relationship="AuctionDBModel.UserAuctionTemplate" FromRole="User" ToRole="AuctionTemplate" />
+        </EntityType>
+        <Association Name="FK_LotAuction">
+          <End Role="Lots" Type="Self.Lot" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Auctions" Type="Self.Auction" Multiplicity="*" >
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="Lots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auctions">
+              <PropertyRef Name="LotId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAuction">
+          <End Role="Users" Type="Self.User" Multiplicity="1" >
+          </End>
+          <End Role="Auctions" Type="Self.Auction" Multiplicity="*" >
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Auctions">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AuctionTemplateLot">
+          <End Role="AuctionTemplates" Type="Self.AuctionTemplate" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Lots" Type="Self.Lot" Multiplicity="*" >
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="AuctionTemplates">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lots">
+              <PropertyRef Name="AuctionTemplateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AuctionDBContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Auctions" EntityType="Self.Auction" />
+          <EntitySet Name="AuctionTemplates" EntityType="Self.AuctionTemplate" />
+          <EntitySet Name="Lots" EntityType="Self.Lot" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_LotAuction" Association="Self.FK_LotAuction">
+            <End Role="Lots" EntitySet="Lots" />
+            <End Role="Auctions" EntitySet="Auctions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAuction" Association="Self.FK_UserAuction">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Auctions" EntitySet="Auctions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AuctionTemplateLot" Association="Self.FK_AuctionTemplateLot">
+            <End Role="AuctionTemplates" EntitySet="AuctionTemplates" />
+            <End Role="Lots" EntitySet="Lots" />
+          </AssociationSet>
+          <AssociationSet Name="UserAuctionTemplate" Association="AuctionDBModel.UserAuctionTemplate">
+            <End Role="User" EntitySet="Users" />
+            <End Role="AuctionTemplate" EntitySet="AuctionTemplates" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="UserAuctionTemplate">
+          <End Type="AuctionDBModel.User" Role="User" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AuctionDBModel.AuctionTemplate" Role="AuctionTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AuctionTemplate">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AuctionDBModelStoreContainer" CdmEntityContainer="AuctionDBContainer">
+    <EntitySetMapping Name="Auctions">
+      <EntityTypeMapping TypeName="IsTypeOf(AuctionDBModel.Auction)">
+        <MappingFragment StoreEntitySet="Auctions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LotId" ColumnName="LotId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="ModifidedDateTime" ColumnName="ModifidedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuctionTemplates">
+      <EntityTypeMapping TypeName="IsTypeOf(AuctionDBModel.AuctionTemplate)">
+        <MappingFragment StoreEntitySet="AuctionTemplates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="ModifidedDateTime" ColumnName="ModifidedDateTime" />
+          <ScalarProperty Name="IsStopped" ColumnName="IsStopped" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="StartedDateTime" ColumnName="StartedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lots">
+      <EntityTypeMapping TypeName="IsTypeOf(AuctionDBModel.Lot)">
+        <MappingFragment StoreEntitySet="Lots">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AuctionTemplateId" ColumnName="AuctionTemplateId" />
+          <ScalarProperty Name="Context" ColumnName="Context" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="StartingPrice" ColumnName="StartingPrice" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="ModifidedDateTime" ColumnName="ModifidedDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(AuctionDBModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

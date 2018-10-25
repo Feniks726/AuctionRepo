@@ -1,0 +1,155 @@
+﻿@using Auction.Common.Constant.Messages
+@using Auction.WebSite.Models
+@model AuctionTemplateViewModel
+
+@{
+    ViewBag.Title = "DetailsTemplate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Messages.MessagesConstant.DetailsTemplate.ToString()</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifidedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifidedDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Started)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Started)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartedDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartedDateTime)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    <div style="@(!Model.StartedDateTime.HasValue ? "display:block" : "display:none")">
+        @Html.ActionLink(@Messages.MessagesConstant.EditTemplate.ToString(), "EditTemplate", new { id = Model.Id })
+    </div>
+    @Html.ActionLink(@Messages.MessagesConstant.BackToList.ToString(), "AuctionTemplates")
+</p>
+
+
+<h2>@Messages.MessagesConstant.LotsOfAuction.ToString()</h2>
+
+<p>
+    <div style="@(!Model.StartedDateTime.HasValue ? "display:block" : "display:none")">
+        @Html.ActionLink(@Messages.MessagesConstant.CreateNew.ToString(), "CreateLot", new { id = Model.Id, auctionTemplateId = Model.Id })
+    </div>
+</p>
+<form method="get">
+    <div class="form-inline">
+        <label class="control-label"><h8>@Messages.MessagesConstant.FilterBy.Format(@Html.DisplayNameFor(model => model.Lots.FirstOrDefault().Context))</h8></label>
+        @Html.TextBox("filterByContext")
+        <input type="submit" value=@Messages.MessagesConstant.Filter class="btn btn-success" />
+    </div>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().Context)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().StartingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().DirectionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().LiderRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().Lider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().CreateDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lots.FirstOrDefault().ModifidedDateTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Lots ?? new List<ActiveLotViewModel>())
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Context)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartingPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectionText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiderRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lider.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifidedDateTime)
+            </td>
+            <td>
+                <div style="@(!Model.StartedDateTime.HasValue ? "display:block" : "display:none")">
+                    @Html.ActionLink(@Messages.MessagesConstant.Edit.ToString(), "EditLot", new { id = item.Id })
+                </div>
+                <div style="@(!Model.StartedDateTime.HasValue ? "display:block" : "display:none")">
+                    @Html.ActionLink(@Messages.MessagesConstant.Delete.ToString(), "DeleteLot", new { id = item.Id })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
